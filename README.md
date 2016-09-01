@@ -7,6 +7,8 @@ Files are identified by file hash (MD5, SHA1, SHA256).  The output is in CSV for
 sent to STDOUT so the data can be saved or piped into another program.  Since the output is in CSV
 format, spreadsheets such as Excel or database systems will easily be able to import the data.
 
+This works with Python v2, but it should also work with Python v3.  If you find it does not work
+with Python v3 please post an issue.
 
 ## Help Screen:
 
@@ -52,6 +54,10 @@ with the following command:
 ```
 $ pip install requests[security]
 ```
+
+If you are using the NSRL database lookups, download the NSRL "Minimal" data set as a zip file.  Put it
+in a directory you can access and point your configuration file to that zip file.  There is no need
+to unzip the NSRL data.
 
 Lastly, I am a fan of virtualenv for Python.  To make a customized local installation of
 Python to run this tool, I recommend you read:  http://docs.python-guide.org/en/latest/dev/virtualenvs/
@@ -120,10 +126,16 @@ $ python fileintel.py local/config.conf sampledata/largerlist.txt -a > sampledat
 
   - VirusTotal (Public API key and network I/O required, throttled when appropriate)
     - http://www.virustotal.com
+  - NSRL Database
+    - http://www.nsrl.nist.gov/Downloads.htm
 
 # Resources:
 
-   - The VirusTotal Python library - https://github.com/blacktop/virustotal-api
+   - The VirusTotal Python library
+     - https://github.com/blacktop/virustotal-api
+   - The NSRL database
+     - http://www.nsrl.nist.gov/Downloads.htm
+     - https://blog.didierstevens.com/2015/09/01/nsrl-py-using-the-reference-data-set-of-the-national-software-reference-library/
 
 # License:
 
@@ -147,7 +159,4 @@ Read [Contributing.md] (Contributing.md)
 - Add OTX
 - Add ThreatExpert
 - Add Cymru
-- Add NSRL
-  - http://www.nsrl.nist.gov/Downloads.htm
-  - https://blog.didierstevens.com/2015/09/01/nsrl-py-using-the-reference-data-set-of-the-national-software-reference-library/
-- Try to incorporate threat feeds from http://www.secrepo.com/
+- Try to incorporate threat feeds from http://www.secrepo.com

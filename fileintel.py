@@ -17,6 +17,8 @@ import sys
 
 # Local VirusTotal functions
 import libs.vt
+# Local NSRL functions
+import libs.nsrl
 
 #
 # COMMAND LINE ARGS
@@ -30,6 +32,7 @@ parser.add_argument('InputFile',
                     help='Input file, one hash per line (MD5, SHA1, SHA256)')
 parser.add_argument('-a','--all', action='store_true', help='Perform All Lookups.')
 parser.add_argument('-v','--virustotal', action='store_true', help='VirusTotal Lookup.')
+parser.add_argument('-n','--nsrl', action='store_true', help='NSRL Lookup for SHA-1 and MD5 hashes ONLY!')
 parser.add_argument('-r','--carriagereturn', action='store_true', help='Use carriage returns with new lines on csv.')
 
 #
@@ -54,6 +57,9 @@ Data = []
 # Pull the VirusTotal config
 vtpublicapi = ConfigFile.get('VirusTotal','PublicAPI')
 
+# Pull the NSRL config
+nsrlpath = ConfigFile.get('NSRL','Path')
+
 # Open file and read into list named hosts
 try:
     with open(args.InputFile) as infile:
@@ -73,6 +79,15 @@ Headers.append('Input File')
 
 # Print Header Flag
 PrintHeaders = True
+
+# Pre Processing Here
+
+# Pre process NSRL results because it is faster this way
+NSRLHashes = []
+if args.nsrl or args.all:
+    sys.stderr.write('Preprocessing NSRL database.... please hold...\n')
+    NSRL = libs.nsrl.NSRL(nsrlpath)
+    NSRLHashes = NSRL.lookup(filehashes)
 
 # Abort Flag
 Aborted = False
@@ -95,6 +110,14 @@ for filehash in filehashes:
             if PrintHeaders:
                 VT.add_headers(Headers)
             VT.add_row(filehash,row)
+
+        # Lookup NSRL - This is slightly different than most modules because of required pre processing
+        # No need to use this as an example unless you preprocess other data
+        if args.nsrl or args.all:
+            NSRL = libs.nsrl.NSRL(nsrlpath)
+            if PrintHeaders:
+                NSRL.add_headers(Headers)
+            NSRL.add_row(NSRLHashes,filehash,row)
 
         # MODULES:  Add additional intelligence source modules here
 
