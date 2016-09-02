@@ -168,4 +168,5 @@ Read [Contributing.md] (Contributing.md)
 - Add PassiveTotal
 - Add ThreatExpert
 - Add Cymru
+- Add Malwr
 - Try to incorporate threat feeds from http://www.secrepo.com
