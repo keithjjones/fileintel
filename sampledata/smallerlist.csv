@@ -1,59 +1,60 @@
-Input File,VirusTotal Link,VirusTotal Scan Date,VirusTotal SHA256,VirusTotal SHA1,VirusTotal MD5,VirusTotal Verbose Msg,VirusTotal Positivie Scans,VirusTotal Total Scans,VirusTotal Conviction Percentage,VirusTotal Scan Results,NSRL SHA-1 or MD5 Match
-275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f,https://www.virustotal.com/file/275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f/analysis/1472740674/,2016-09-01 14:37:54,275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f,3395856ce81f2b7382dee72602f798b642f14140,44d88612fea8a8f36de82e1278abb02f,"Scan finished, information embedded",53,55,96.3636363636,"Bkav Detected: True Result: DOS.EiracA.Trojan Version:  Update: 20160901
-MicroWorld-eScan Detected: True Result: EICAR-Test-File Version:  Update: 20160901
-nProtect Detected: True Result: EICAR-Test-File Version:  Update: 20160901
+Input File,VirusTotal Link,VirusTotal Scan Date,VirusTotal SHA256,VirusTotal SHA1,VirusTotal MD5,VirusTotal Verbose Msg,VirusTotal Positivie Scans,VirusTotal Total Scans,VirusTotal Conviction Percentage,VirusTotal Scan Results,ThreatCrowd URL,ThreatCrowd SHA-1,ThreatCrowd MD5,ThreatCrowd IPs,ThreatCrowd References,ThreatCrowd Domains,ThreatCrowd Scans,NSRL SHA-1 or MD5 Match
+275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f,https://www.virustotal.com/file/275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f/analysis/1472823097/,2016-09-02 13:31:37,275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f,3395856ce81f2b7382dee72602f798b642f14140,44d88612fea8a8f36de82e1278abb02f,"Scan finished, information embedded",54,56,96.4285714286,"Bkav Detected: True Result: DOS.EiracA.Trojan Version:  Update: 20160901
+MicroWorld-eScan Detected: True Result: EICAR-Test-File Version:  Update: 20160902
+nProtect Detected: True Result: EICAR-Test-File Version:  Update: 20160902
 CMC Detected: True Result: Eicar.test.file Version:  Update: 20160901
-CAT-QuickHeal Detected: True Result: EICAR.TestFile Version:  Update: 20160831
-McAfee Detected: True Result: EICAR test file Version:  Update: 20160901
-Malwarebytes Detected: False Result: None Version:  Update: 20160901
+CAT-QuickHeal Detected: True Result: EICAR.TestFile Version:  Update: 20160902
+ALYac Detected: True Result: Misc.Eicar-Test-File Version:  Update: 20160902
+Malwarebytes Detected: False Result: None Version:  Update: 20160902
 VIPRE Detected: True Result: EICAR (v) Version:  Update: 20160831
-AegisLab Detected: True Result: EICAR-Test-File!c Version:  Update: 20160901
-TheHacker Detected: True Result: EICAR_Test_File Version:  Update: 20160829
-BitDefender Detected: True Result: EICAR-Test-File (not a virus) Version:  Update: 20160901
-K7GW Detected: True Result: EICAR_Test_File Version:  Update: 20160901
-K7AntiVirus Detected: True Result: EICAR_Test_File Version:  Update: 20160901
-Baidu Detected: True Result: Win32.Test.Eicar.a Version:  Update: 20160901
-F-Prot Detected: True Result: EICAR_Test_File Version:  Update: 20160901
-Symantec Detected: True Result: EICAR Test String Version:  Update: 20160901
-ESET-NOD32 Detected: True Result: Eicar test file Version:  Update: 20160901
-TrendMicro-HouseCall Detected: True Result: Eicar_test_file Version:  Update: 20160901
-Avast Detected: True Result: EICAR Test-NOT virus!!! Version:  Update: 20160901
-ClamAV Detected: True Result: Eicar-Test-Signature Version:  Update: 20160901
-Kaspersky Detected: True Result: EICAR-Test-File Version:  Update: 20160901
+AegisLab Detected: True Result: EICAR-Test-File!c Version:  Update: 20160902
+TheHacker Detected: True Result: EICAR_Test_File Version:  Update: 20160902
+BitDefender Detected: True Result: EICAR-Test-File (not a virus) Version:  Update: 20160902
+K7GW Detected: True Result: EICAR_Test_File Version:  Update: 20160902
+K7AntiVirus Detected: True Result: EICAR_Test_File Version:  Update: 20160902
+Arcabit Detected: True Result: EICAR-Test-File (not a virus) Version:  Update: 20160902
+Baidu Detected: True Result: Win32.Test.Eicar.a Version:  Update: 20160902
+F-Prot Detected: True Result: EICAR_Test_File Version:  Update: 20160902
+Symantec Detected: True Result: EICAR Test String Version:  Update: 20160902
+ESET-NOD32 Detected: True Result: Eicar test file Version:  Update: 20160902
+TrendMicro-HouseCall Detected: True Result: Eicar_test_file Version:  Update: 20160902
+Avast Detected: True Result: EICAR Test-NOT virus!!! Version:  Update: 20160902
+ClamAV Detected: True Result: Eicar-Test-Signature Version:  Update: 20160902
+Kaspersky Detected: True Result: EICAR-Test-File Version:  Update: 20160902
 Alibaba Detected: False Result: None Version:  Update: 20160901
-NANO-Antivirus Detected: True Result: Marker.Dos.EICAR.dymlmx Version:  Update: 20160901
-ViRobot Detected: True Result: EICAR-test[h] Version:  Update: 20160901
-Tencent Detected: True Result: EICAR.TEST.NOT-A-VIRUS Version:  Update: 20160901
-Ad-Aware Detected: True Result: EICAR-Test-File (not a virus) Version:  Update: 20160901
-Sophos Detected: True Result: EICAR-AV-Test Version:  Update: 20160901
-Comodo Detected: True Result: EICAR-Test-File Version:  Update: 20160901
-F-Secure Detected: True Result: EICAR_Test_File Version:  Update: 20160901
-DrWeb Detected: True Result: EICAR Test File (NOT a Virus!) Version:  Update: 20160901
-Zillya Detected: True Result: EICAR.TestFile Version:  Update: 20160901
-TrendMicro Detected: True Result: Eicar_test_file Version:  Update: 20160901
-McAfee-GW-Edition Detected: True Result: EICAR test file Version:  Update: 20160901
-Emsisoft Detected: True Result: EICAR-Test-File (not a virus) (B) Version:  Update: 20160901
-Cyren Detected: True Result: EICAR_Test_File Version:  Update: 20160901
-Jiangmin Detected: True Result: EICAR-Test-File Version:  Update: 20160901
-Avira Detected: True Result: Eicar-Test-Signature Version:  Update: 20160901
-Fortinet Detected: True Result: EICAR_TEST_FILE Version:  Update: 20160901
-Antiy-AVL Detected: True Result: TestFile/Win32.EICAR Version:  Update: 20160901
-Kingsoft Detected: True Result: Test.eicar.aa Version:  Update: 20160901
-Arcabit Detected: True Result: EICAR-Test-File (not a virus) Version:  Update: 20160901
-SUPERAntiSpyware Detected: True Result: NotAThreat.EICAR[TestFile] Version:  Update: 20160831
-Microsoft Detected: True Result: Virus:DOS/EICAR_Test_File Version:  Update: 20160901
-AhnLab-V3 Detected: True Result: EICAR_Test_File Version:  Update: 20160901
-ALYac Detected: True Result: Misc.Eicar-Test-File Version:  Update: 20160901
-AVware Detected: True Result: EICAR (v) Version:  Update: 20160901
-VBA32 Detected: True Result: EICAR-Test-File Version:  Update: 20160831
-Zoner Detected: True Result: EICAR.Test.File-NoVirus Version:  Update: 20160901
-Rising Detected: True Result: EICAR-Test-File (classic) Version:  Update: 20160901
-Yandex Detected: True Result: EICAR_test_file Version:  Update: 20160831
-Ikarus Detected: True Result: EICAR-Test-File Version:  Update: 20160901
-GData Detected: True Result: EICAR-Test-File (not a virus) Version:  Update: 20160901
-AVG Detected: True Result: EICAR_Test Version:  Update: 20160901
-Panda Detected: True Result: EICAR-AV-TEST-FILE Version:  Update: 20160901
-Qihoo-360 Detected: True Result: qex.eicar.gen.gen Version:  Update: 20160901",False
+NANO-Antivirus Detected: True Result: Marker.Dos.EICAR.dymlmx Version:  Update: 20160902
+ViRobot Detected: True Result: EICAR-test[h] Version:  Update: 20160902
+Rising Detected: True Result: EICAR-Test-File (classic) Version:  Update: 20160902
+Ad-Aware Detected: True Result: EICAR-Test-File (not a virus) Version:  Update: 20160902
+Sophos Detected: True Result: EICAR-AV-Test Version:  Update: 20160902
+Comodo Detected: True Result: EICAR-Test-File Version:  Update: 20160902
+F-Secure Detected: True Result: EICAR_Test_File Version:  Update: 20160902
+DrWeb Detected: True Result: EICAR Test File (NOT a Virus!) Version:  Update: 20160902
+Zillya Detected: True Result: EICAR.TestFile Version:  Update: 20160902
+TrendMicro Detected: True Result: Eicar_test_file Version:  Update: 20160902
+McAfee-GW-Edition Detected: True Result: EICAR test file Version:  Update: 20160902
+Emsisoft Detected: True Result: EICAR-Test-File (not a virus) (B) Version:  Update: 20160902
+Cyren Detected: True Result: EICAR_Test_File Version:  Update: 20160902
+Jiangmin Detected: True Result: EICAR-Test-File Version:  Update: 20160902
+Avira Detected: True Result: Eicar-Test-Signature Version:  Update: 20160902
+Antiy-AVL Detected: True Result: TestFile/Win32.EICAR Version:  Update: 20160902
+Kingsoft Detected: True Result: Test.eicar.aa Version:  Update: 20160902
+Microsoft Detected: True Result: Virus:DOS/EICAR_Test_File Version:  Update: 20160902
+SUPERAntiSpyware Detected: True Result: NotAThreat.EICAR[TestFile] Version:  Update: 20160901
+AhnLab-V3 Detected: True Result: EICAR_Test_File Version:  Update: 20160902
+GData Detected: True Result: EICAR-Test-File (not a virus) Version:  Update: 20160902
+TotalDefense Detected: True Result: the EICAR test string Version:  Update: 20160902
+McAfee Detected: True Result: EICAR test file Version:  Update: 20160902
+AVware Detected: True Result: EICAR (v) Version:  Update: 20160902
+VBA32 Detected: True Result: EICAR-Test-File Version:  Update: 20160902
+Zoner Detected: True Result: EICAR.Test.File-NoVirus Version:  Update: 20160902
+Tencent Detected: True Result: EICAR.TEST.NOT-A-VIRUS Version:  Update: 20160902
+Yandex Detected: True Result: EICAR_test_file Version:  Update: 20160901
+Ikarus Detected: True Result: EICAR-Test-File Version:  Update: 20160902
+Fortinet Detected: True Result: EICAR_TEST_FILE Version:  Update: 20160902
+AVG Detected: True Result: EICAR_Test Version:  Update: 20160902
+Panda Detected: True Result: EICAR-AV-TEST-FILE Version:  Update: 20160902
+Qihoo-360 Detected: True Result: qex.eicar.gen.gen Version:  Update: 20160902",NA,,,,,,,False
 001025c6d4974fb2ccbea56f710282aca6c1353cc7120d5d4a7853688084953a,https://www.virustotal.com/file/001025c6d4974fb2ccbea56f710282aca6c1353cc7120d5d4a7853688084953a/analysis/1472555297/,2016-08-30 11:08:17,001025c6d4974fb2ccbea56f710282aca6c1353cc7120d5d4a7853688084953a,84c17e0ce55db895c7f62c6838a061a9a77007d7,fadc983f4577da8a7caa35e5096ddf14,"Scan finished, information embedded",38,57,66.6666666667,"Bkav Detected: True Result: W32.HfsAdware.59EA Version:  Update: 20160829
 MicroWorld-eScan Detected: False Result: None Version:  Update: 20160830
 nProtect Detected: False Result: None Version:  Update: 20160830
@@ -110,8 +111,8 @@ GData Detected: True Result: Application.Generic.1564298 Version:  Update: 20160
 AVG Detected: True Result: Generic7.BCS Version:  Update: 20160830
 Panda Detected: True Result: Trj/CI.A Version:  Update: 20160829
 CrowdStrike Detected: True Result: malicious_confidence_99% (D) Version:  Update: 20160725
-Qihoo-360 Detected: True Result: Win32/Virus.IM.2bf Version:  Update: 20160830",False
-001025c6d4974fb2ccbea56f710282aca6c1353cc7120d5d4a7853688084953b,,,,,,"The requested resource is not among the finished, queued or pending scans",0,0,NaN,,False
+Qihoo-360 Detected: True Result: Win32/Virus.IM.2bf Version:  Update: 20160830",NA,,,,,,,False
+001025c6d4974fb2ccbea56f710282aca6c1353cc7120d5d4a7853688084953b,,,,,,"The requested resource is not among the finished, queued or pending scans",0,0,NaN,,NA,,,,,,,False
 CEEF161D68AE2B690FA9616361271578,https://www.virustotal.com/file/cebf5c1c762cff1c0442320b118ac83d76266b6358bc768205788bba31abdf24/analysis/1472635960/,2016-08-31 09:32:40,cebf5c1c762cff1c0442320b118ac83d76266b6358bc768205788bba31abdf24,536f9792b32a1eb2cc5ecd463d2fbed01d28175c,ceef161d68ae2b690fa9616361271578,"Scan finished, information embedded",47,58,81.0344827586,"Bkav Detected: False Result: None Version:  Update: 20160831
 MicroWorld-eScan Detected: True Result: Generic.MSIL.Bladabindi.3D8207C9 Version:  Update: 20160831
 nProtect Detected: False Result: None Version:  Update: 20160831
@@ -169,61 +170,63 @@ GData Detected: True Result: Generic.MSIL.Bladabindi.3D8207C9 Version:  Update: 
 AVG Detected: True Result: PSW.ILUSpy Version:  Update: 20160831
 Panda Detected: True Result: Trj/GdSda.A Version:  Update: 20160831
 CrowdStrike Detected: True Result: malicious_confidence_100% (W) Version:  Update: 20160725
-Qihoo-360 Detected: False Result: None Version:  Update: 20160831",False
-D41D8CD98F00B204E9800998ECF8427E,https://www.virustotal.com/file/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/analysis/1472749442/,2016-09-01 17:04:02,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,da39a3ee5e6b4b0d3255bfef95601890afd80709,d41d8cd98f00b204e9800998ecf8427e,"Scan finished, information embedded",0,54,0.0,"MicroWorld-eScan Detected: False Result: None Version:  Update: 20160901
-nProtect Detected: False Result: None Version:  Update: 20160901
+Qihoo-360 Detected: False Result: None Version:  Update: 20160831",https://www.threatcrowd.org/malware.php?md5=ceef161d68ae2b690fa9616361271578,536f9792b32a1eb2cc5ecd463d2fbed01d28175c,ceef161d68ae2b690fa9616361271578,194.58.74.79,,root123.ddns.net,,False
+D41D8CD98F00B204E9800998ECF8427E,https://www.virustotal.com/file/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/analysis/1472826786/,2016-09-02 14:33:06,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,da39a3ee5e6b4b0d3255bfef95601890afd80709,d41d8cd98f00b204e9800998ecf8427e,"Scan finished, information embedded",0,56,0.0,"Bkav Detected: False Result: None Version:  Update: 20160901
+MicroWorld-eScan Detected: False Result: None Version:  Update: 20160902
+nProtect Detected: False Result: None Version:  Update: 20160902
 CMC Detected: False Result: None Version:  Update: 20160901
-CAT-QuickHeal Detected: False Result: None Version:  Update: 20160901
-McAfee Detected: False Result: None Version:  Update: 20160901
-Malwarebytes Detected: False Result: None Version:  Update: 20160901
-Zillya Detected: False Result: None Version:  Update: 20160901
-SUPERAntiSpyware Detected: False Result: None Version:  Update: 20160831
-TheHacker Detected: False Result: None Version:  Update: 20160829
-BitDefender Detected: False Result: None Version:  Update: 20160901
-K7GW Detected: False Result: None Version:  Update: 20160901
-K7AntiVirus Detected: False Result: None Version:  Update: 20160901
-Baidu Detected: False Result: None Version:  Update: 20160901
-Cyren Detected: False Result: None Version:  Update: 20160901
-Symantec Detected: False Result: None Version:  Update: 20160901
-ESET-NOD32 Detected: False Result: None Version:  Update: 20160901
-TrendMicro-HouseCall Detected: False Result: None Version:  Update: 20160901
-Avast Detected: False Result: None Version:  Update: 20160901
-ClamAV Detected: False Result: None Version:  Update: 20160901
-Kaspersky Detected: False Result: None Version:  Update: 20160901
-Alibaba Detected: False Result: None Version:  Update: 20160901
-NANO-Antivirus Detected: False Result: None Version:  Update: 20160901
-AegisLab Detected: False Result: None Version:  Update: 20160901
-Rising Detected: False Result: None Version:  Update: 20160901
-Ad-Aware Detected: False Result: None Version:  Update: 20160901
-Sophos Detected: False Result: None Version:  Update: 20160901
-Comodo Detected: False Result: None Version:  Update: 20160901
-F-Secure Detected: False Result: None Version:  Update: 20160901
-DrWeb Detected: False Result: None Version:  Update: 20160901
+CAT-QuickHeal Detected: False Result: None Version:  Update: 20160902
+ALYac Detected: False Result: None Version:  Update: 20160902
+Malwarebytes Detected: False Result: None Version:  Update: 20160902
 VIPRE Detected: False Result: None Version:  Update: 20160831
-TrendMicro Detected: False Result: None Version:  Update: 20160901
-McAfee-GW-Edition Detected: False Result: None Version:  Update: 20160901
-Emsisoft Detected: False Result: None Version:  Update: 20160901
-F-Prot Detected: False Result: None Version:  Update: 20160901
-Jiangmin Detected: False Result: None Version:  Update: 20160901
-Avira Detected: False Result: None Version:  Update: 20160901
-Fortinet Detected: False Result: None Version:  Update: 20160901
-Antiy-AVL Detected: False Result: None Version:  Update: 20160901
-Kingsoft Detected: False Result: None Version:  Update: 20160901
-Arcabit Detected: False Result: None Version:  Update: 20160901
-ViRobot Detected: False Result: None Version:  Update: 20160901
-Microsoft Detected: False Result: None Version:  Update: 20160901
-AhnLab-V3 Detected: False Result: None Version:  Update: 20160901
-ALYac Detected: False Result: None Version:  Update: 20160901
-AVware Detected: False Result: None Version:  Update: 20160901
-VBA32 Detected: False Result: None Version:  Update: 20160831
-Zoner Detected: False Result: None Version:  Update: 20160901
-Tencent Detected: False Result: None Version:  Update: 20160901
-Yandex Detected: False Result: None Version:  Update: 20160831
-Ikarus Detected: False Result: None Version:  Update: 20160901
-GData Detected: False Result: None Version:  Update: 20160901
-AVG Detected: False Result: None Version:  Update: 20160901
-Panda Detected: False Result: None Version:  Update: 20160901
-Qihoo-360 Detected: False Result: None Version:  Update: 20160901",True
+K7AntiVirus Detected: False Result: None Version:  Update: 20160902
+BitDefender Detected: False Result: None Version:  Update: 20160902
+K7GW Detected: False Result: None Version:  Update: 20160902
+TheHacker Detected: False Result: None Version:  Update: 20160902
+Baidu Detected: False Result: None Version:  Update: 20160902
+F-Prot Detected: False Result: None Version:  Update: 20160902
+Symantec Detected: False Result: None Version:  Update: 20160902
+ESET-NOD32 Detected: False Result: None Version:  Update: 20160902
+TrendMicro-HouseCall Detected: False Result: None Version:  Update: 20160902
+Avast Detected: False Result: None Version:  Update: 20160902
+ClamAV Detected: False Result: None Version:  Update: 20160902
+Kaspersky Detected: False Result: None Version:  Update: 20160902
+Alibaba Detected: False Result: None Version:  Update: 20160901
+NANO-Antivirus Detected: False Result: None Version:  Update: 20160902
+ViRobot Detected: False Result: None Version:  Update: 20160902
+AegisLab Detected: False Result: None Version:  Update: 20160902
+Tencent Detected: False Result: None Version:  Update: 20160902
+Ad-Aware Detected: False Result: None Version:  Update: 20160902
+Sophos Detected: False Result: None Version:  Update: 20160902
+Comodo Detected: False Result: None Version:  Update: 20160902
+F-Secure Detected: False Result: None Version:  Update: 20160902
+DrWeb Detected: False Result: None Version:  Update: 20160902
+Zillya Detected: False Result: None Version:  Update: 20160902
+TrendMicro Detected: False Result: None Version:  Update: 20160902
+McAfee-GW-Edition Detected: False Result: None Version:  Update: 20160902
+Emsisoft Detected: False Result: None Version:  Update: 20160902
+Cyren Detected: False Result: None Version:  Update: 20160902
+Jiangmin Detected: False Result: None Version:  Update: 20160902
+Avira Detected: False Result: None Version:  Update: 20160902
+Fortinet Detected: False Result: None Version:  Update: 20160902
+Antiy-AVL Detected: False Result: None Version:  Update: 20160902
+Kingsoft Detected: False Result: None Version:  Update: 20160902
+Arcabit Detected: False Result: None Version:  Update: 20160902
+SUPERAntiSpyware Detected: False Result: None Version:  Update: 20160901
+AhnLab-V3 Detected: False Result: None Version:  Update: 20160902
+Microsoft Detected: False Result: None Version:  Update: 20160902
+TotalDefense Detected: False Result: None Version:  Update: 20160902
+McAfee Detected: False Result: None Version:  Update: 20160902
+AVware Detected: False Result: None Version:  Update: 20160902
+VBA32 Detected: False Result: None Version:  Update: 20160902
+Zoner Detected: False Result: None Version:  Update: 20160902
+Rising Detected: False Result: None Version:  Update: 20160902
+Yandex Detected: False Result: None Version:  Update: 20160901
+Ikarus Detected: False Result: None Version:  Update: 20160902
+GData Detected: False Result: None Version:  Update: 20160902
+AVG Detected: False Result: None Version:  Update: 20160902
+Panda Detected: False Result: None Version:  Update: 20160902
+Qihoo-360 Detected: False Result: None Version:  Update: 20160902",https://www.threatcrowd.org/malware.php?md5=d41d8cd98f00b204e9800998ecf8427e,0117a6026e1a3fcff386558a2c7386deb4643662,d41d8cd98f00b204e9800998ecf8427e,,,intweb.mobwork.net,BackDoor.Comet.2020; Mal/MSIL-PX; Trojan.MSIL.Crypt; W32/Trojan.UEGX-7731; Backdoor*Win32/Fynloski; Trojan ( 004be5b21 ); MSIL/Packed.Confuser.P suspicious; Suspicious.0000000000480.mg; TR/Crypt.Xpack.440461; ,True
 B284A42B124849E71DBEF653D30229F1,https://www.virustotal.com/file/da3a3e5c3e436967c2f62d6e777b9f9b118ab995ee1a569161494489614c09fa/analysis/1472590869/,2016-08-30 21:01:09,da3a3e5c3e436967c2f62d6e777b9f9b118ab995ee1a569161494489614c09fa,0322a0ba58b95db9a2227f12d193fddea74cff89,b284a42b124849e71dbef653d30229f1,"Scan finished, information embedded",31,56,55.3571428571,"Bkav Detected: False Result: None Version:  Update: 20160830
 MicroWorld-eScan Detected: True Result: Gen:Variant.Symmi.54995 Version:  Update: 20160830
 nProtect Detected: False Result: None Version:  Update: 20160830
@@ -279,7 +282,7 @@ Ikarus Detected: True Result: Backdoor.Win32.Hupigon Version:  Update: 20160830
 GData Detected: True Result: Gen:Variant.Symmi.54995 Version:  Update: 20160830
 AVG Detected: True Result: Delf.AYAY Version:  Update: 20160830
 Panda Detected: True Result: Trj/GdSda.A Version:  Update: 20160830
-Qihoo-360 Detected: True Result: HEUR/QVM33.0.0000.Malware.Gen Version:  Update: 20160830",False
+Qihoo-360 Detected: True Result: HEUR/QVM33.0.0000.Malware.Gen Version:  Update: 20160830",NA,,,,,,,False
 0322A0BA58B95DB9A2227F12D193FDDEA74CFF89,https://www.virustotal.com/file/da3a3e5c3e436967c2f62d6e777b9f9b118ab995ee1a569161494489614c09fa/analysis/1472590869/,2016-08-30 21:01:09,da3a3e5c3e436967c2f62d6e777b9f9b118ab995ee1a569161494489614c09fa,0322a0ba58b95db9a2227f12d193fddea74cff89,b284a42b124849e71dbef653d30229f1,"Scan finished, information embedded",31,56,55.3571428571,"Bkav Detected: False Result: None Version:  Update: 20160830
 MicroWorld-eScan Detected: True Result: Gen:Variant.Symmi.54995 Version:  Update: 20160830
 nProtect Detected: False Result: None Version:  Update: 20160830
@@ -335,7 +338,7 @@ Ikarus Detected: True Result: Backdoor.Win32.Hupigon Version:  Update: 20160830
 GData Detected: True Result: Gen:Variant.Symmi.54995 Version:  Update: 20160830
 AVG Detected: True Result: Delf.AYAY Version:  Update: 20160830
 Panda Detected: True Result: Trj/GdSda.A Version:  Update: 20160830
-Qihoo-360 Detected: True Result: HEUR/QVM33.0.0000.Malware.Gen Version:  Update: 20160830",False
+Qihoo-360 Detected: True Result: HEUR/QVM33.0.0000.Malware.Gen Version:  Update: 20160830",NA,,,,,,,False
 E02CE6D73156A11BA84A798B26DE1D12,https://www.virustotal.com/file/26ee87d96144e5882302ae4f98ebd1c58f5f53223438e4a6498bf465848a8c0a/analysis/1470068910/,2016-08-01 16:28:30,26ee87d96144e5882302ae4f98ebd1c58f5f53223438e4a6498bf465848a8c0a,725e80cab7c88d7e960c478e1b975e003e0c0c66,e02ce6d73156a11ba84a798b26de1d12,"Scan finished, information embedded",54,55,98.1818181818,"Bkav Detected: True Result: W32.Sality.PE Version:  Update: 20160801
 MicroWorld-eScan Detected: True Result: Win32.Sality.3 Version:  Update: 20160801
 nProtect Detected: True Result: Virus/W32.Sality.D Version:  Update: 20160729
@@ -390,7 +393,7 @@ Ikarus Detected: True Result: Trojan.Win32.ServStart Version:  Update: 20160801
 GData Detected: True Result: Win32.Sality.3 Version:  Update: 20160801
 AVG Detected: True Result: BackDoor.Generic_r.ARQ Version:  Update: 20160801
 Panda Detected: True Result: W32/Sality.AA Version:  Update: 20160801
-Qihoo-360 Detected: True Result: Backdoor.Win32.Rbot.B Version:  Update: 20160801",False
+Qihoo-360 Detected: True Result: Backdoor.Win32.Rbot.B Version:  Update: 20160801",NA,,,,,,,False
 B4ED7AEDACD28CBBDE6978FB09C22C75,https://www.virustotal.com/file/6a6f5ca9ea72f4573e8406ef3c2539fee721093b48124d99bcdd3093a06b7638/analysis/1472590951/,2016-08-30 21:02:31,6a6f5ca9ea72f4573e8406ef3c2539fee721093b48124d99bcdd3093a06b7638,c6336ea255efa7371337c0882d175bee44cbbd49,b4ed7aedacd28cbbde6978fb09c22c75,"Scan finished, information embedded",56,58,96.5517241379,"Bkav Detected: True Result: W32.BackdoorWabot.Trojan Version:  Update: 20160830
 MicroWorld-eScan Detected: True Result: Gen:Trojan.ShellIni.LHZ@aW0Tlfli Version:  Update: 20160830
 nProtect Detected: True Result: Backdoor/W32.Wabot.1667584 Version:  Update: 20160830
@@ -448,7 +451,7 @@ GData Detected: True Result: Gen:Trojan.ShellIni.LHZ@aW0Tlfli Version:  Update: 
 AVG Detected: True Result: BackDoor.Wabot.A Version:  Update: 20160830
 Panda Detected: True Result: Backdoor Program Version:  Update: 20160830
 CrowdStrike Detected: True Result: malicious_confidence_100% (W) Version:  Update: 20160725
-Qihoo-360 Detected: True Result: Backdoor.Win32.Agent.DP Version:  Update: 20160830",False
+Qihoo-360 Detected: True Result: Backdoor.Win32.Agent.DP Version:  Update: 20160830",NA,,,,,,,False
 C6336EA255EFA7371337C0882D175BEE44CBBD49,https://www.virustotal.com/file/6a6f5ca9ea72f4573e8406ef3c2539fee721093b48124d99bcdd3093a06b7638/analysis/1472590951/,2016-08-30 21:02:31,6a6f5ca9ea72f4573e8406ef3c2539fee721093b48124d99bcdd3093a06b7638,c6336ea255efa7371337c0882d175bee44cbbd49,b4ed7aedacd28cbbde6978fb09c22c75,"Scan finished, information embedded",56,58,96.5517241379,"Bkav Detected: True Result: W32.BackdoorWabot.Trojan Version:  Update: 20160830
 MicroWorld-eScan Detected: True Result: Gen:Trojan.ShellIni.LHZ@aW0Tlfli Version:  Update: 20160830
 nProtect Detected: True Result: Backdoor/W32.Wabot.1667584 Version:  Update: 20160830
@@ -506,4 +509,4 @@ GData Detected: True Result: Gen:Trojan.ShellIni.LHZ@aW0Tlfli Version:  Update: 
 AVG Detected: True Result: BackDoor.Wabot.A Version:  Update: 20160830
 Panda Detected: True Result: Backdoor Program Version:  Update: 20160830
 CrowdStrike Detected: True Result: malicious_confidence_100% (W) Version:  Update: 20160725
-Qihoo-360 Detected: True Result: Backdoor.Win32.Agent.DP Version:  Update: 20160830",False
+Qihoo-360 Detected: True Result: Backdoor.Win32.Agent.DP Version:  Update: 20160830",NA,,,,,,,False

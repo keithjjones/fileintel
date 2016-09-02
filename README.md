@@ -15,7 +15,7 @@ with Python v3 please post an issue.
 
 ```
 $ python fileintel.py -h
-usage: fileintel.py [-h] [-a] [-v] [-n] [-r] ConfigurationFile InputFile
+usage: fileintel.py [-h] [-a] [-v] [-n] [-t] [-r] ConfigurationFile InputFile
 
 Modular application to look up file intelligence information. Outputs CSV to
 STDOUT.
@@ -29,6 +29,7 @@ optional arguments:
   -a, --all             Perform All Lookups.
   -v, --virustotal      VirusTotal Lookup.
   -n, --nsrl            NSRL Lookup for SHA-1 and MD5 hashes ONLY!
+  -t, --threatcrowd     ThreatCrowd Lookup for SHA-1 and MD5 hashes ONLY!
   -r, --carriagereturn  Use carriage returns with new lines on csv.
 ```
 
@@ -131,6 +132,8 @@ Preprocessing NSRL database.... please hold...
     - http://www.virustotal.com
   - NSRL Database
     - http://www.nsrl.nist.gov/Downloads.htm
+  - ThreatCrowd (Network I/O required, throttled when appropriate)
+    - http://www.threatcrowd.org
 
 # Resources:
 
@@ -139,6 +142,9 @@ Preprocessing NSRL database.... please hold...
    - The NSRL database
      - http://www.nsrl.nist.gov/Downloads.htm
      - https://blog.didierstevens.com/2015/09/01/nsrl-py-using-the-reference-data-set-of-the-national-software-reference-library/
+   - The ThreatCrowd Python library
+     - https://github.com/threatcrowd/ApiV2
+     - https://github.com/jheise/threatcrowd_api
 
 # License:
 
@@ -158,8 +164,8 @@ Read [Contributing.md] (Contributing.md)
 
 # To Do:
 
-- Add ThreatCrowd
 - Add OTX
+- Add PassiveTotal
 - Add ThreatExpert
 - Add Cymru
 - Try to incorporate threat feeds from http://www.secrepo.com
