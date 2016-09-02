@@ -15,7 +15,7 @@ with Python v3 please post an issue.
 
 ```
 $ python fileintel.py -h
-usage: fileintel.py [-h] [-a] [-v] [-r] ConfigurationFile InputFile
+usage: fileintel.py [-h] [-a] [-v] [-n] [-r] ConfigurationFile InputFile
 
 Modular application to look up file intelligence information. Outputs CSV to
 STDOUT.
@@ -28,6 +28,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -a, --all             Perform All Lookups.
   -v, --virustotal      VirusTotal Lookup.
+  -n, --nsrl            NSRL Lookup for SHA-1 and MD5 hashes ONLY!
   -r, --carriagereturn  Use carriage returns with new lines on csv.
 ```
 
@@ -85,6 +86,7 @@ works in the following way:
 
 ```
 $ python fileintel.py local/config.conf sampledata/smallerlist.txt -a > sampledata/smallerlist.csv
+Preprocessing NSRL database.... please hold...
 *** Processing 275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f ***
 *** Processing 001025c6d4974fb2ccbea56f710282aca6c1353cc7120d5d4a7853688084953a ***
 *** Processing CEEF161D68AE2B690FA9616361271578 ***
@@ -100,6 +102,7 @@ $ python fileintel.py local/config.conf sampledata/smallerlist.txt -a > sampleda
 
 ```
 $ python fileintel.py local/config.conf sampledata/largerlist.txt -a > sampledata/largerlist.csv
+Preprocessing NSRL database.... please hold...
 *** Processing 275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f ***
 *** Processing 001025c6d4974fb2ccbea56f710282aca6c1353cc7120d5d4a7853688084953a ***
 *** Processing CEEF161D68AE2B690FA9616361271578 ***
