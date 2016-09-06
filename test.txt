@@ -1,0 +1,2 @@
+threatcrowd==0.4
+virustotal_api==1.1.2

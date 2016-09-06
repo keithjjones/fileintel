@@ -134,6 +134,8 @@ Preprocessing NSRL database.... please hold...
     - http://www.nsrl.nist.gov/Downloads.htm
   - ThreatCrowd (Network I/O required, throttled when appropriate)
     - http://www.threatcrowd.org
+  - OTX by AlienVault (API key and network I/O required)
+    - https://otx.alienvault.com
 
 # Resources:
 
@@ -145,6 +147,9 @@ Preprocessing NSRL database.... please hold...
    - The ThreatCrowd Python library
      - https://github.com/threatcrowd/ApiV2
      - https://github.com/jheise/threatcrowd_api
+   - The OTX Python Library
+     - https://github.com/AlienVault-Labs/OTX-Python-SDK
+     - https://otx.alienvault.com/api/
 
 # License:
 
