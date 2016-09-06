@@ -44,7 +44,7 @@ class OTX(object):
             otxanalysisdata = self.otx.get(self.fileurl.format(filehash,'analysis'))
             otxurl = 'https://otx.alienvault.com/indicator/file/{}'.format(filehash)
         except OTXv2.InvalidAPIKey:
-            sys.stderr.write("ERROR:  OTX API key or not valid!\n")
+            sys.stderr.write("ERROR:  OTX API key invalid!\n")
             raise
         except OTXv2.BadRequest:
             otxgendata = {}
