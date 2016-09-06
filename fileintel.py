@@ -85,6 +85,7 @@ else:
 
 # Add standard header info
 Headers.append('Input File')
+Headers.append('Hash Type?')
 
 # Print Header Flag
 PrintHeaders = True
@@ -112,6 +113,17 @@ for filehash in filehashes:
 
         # Add the host to the output
         row.append(filehash)
+
+        if len(filehash) == 32:
+            row.append('MD5')
+        elif len(filehash) == 40:
+            row.append('SHA-1')
+        elif len(filehash) == 64:
+            row.append('SHA-256')
+        elif len(filehash) == 128:
+            row.append('SHA-512')
+        else:
+            row.append('Unknown')
 
         # Lookup VirusTotal
         if args.virustotal or args.all:
