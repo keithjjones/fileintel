@@ -15,7 +15,8 @@ with Python v3 please post an issue.
 
 ```
 $ python fileintel.py -h
-usage: fileintel.py [-h] [-a] [-v] [-n] [-t] [-r] ConfigurationFile InputFile
+usage: fileintel.py [-h] [-a] [-v] [-n] [-o] [-t] [-r]
+                    ConfigurationFile InputFile
 
 Modular application to look up file intelligence information. Outputs CSV to
 STDOUT.
@@ -29,6 +30,7 @@ optional arguments:
   -a, --all             Perform All Lookups.
   -v, --virustotal      VirusTotal Lookup.
   -n, --nsrl            NSRL Lookup for SHA-1 and MD5 hashes ONLY!
+  -o, --otx             OTX by AlienVault Lookup.
   -t, --threatcrowd     ThreatCrowd Lookup for SHA-1 and MD5 hashes ONLY!
   -r, --carriagereturn  Use carriage returns with new lines on csv.
 ```
@@ -169,7 +171,6 @@ Read [Contributing.md] (Contributing.md)
 
 # To Do:
 
-- Add OTX
 - Add PassiveTotal
 - Add ThreatExpert
 - Add Cymru
