@@ -36,23 +36,23 @@ parser.add_argument('ConfigurationFile', help='Configuration file')
 parser.add_argument('InputFile',
                     help='Input file, one hash per line (MD5, SHA1, SHA256)')
 parser.add_argument('-a',
-    '--all', action='store_true',
-    help='Perform All Lookups.')
+                    '--all', action='store_true',
+                    help='Perform All Lookups.')
 parser.add_argument('-v',
-    '--virustotal', action='store_true',
-    help='VirusTotal Lookup.')
+                    '--virustotal', action='store_true',
+                    help='VirusTotal Lookup.')
 parser.add_argument('-n',
-    '--nsrl', action='store_true',
-    help='NSRL Lookup for SHA-1 and MD5 hashes ONLY!')
+                    '--nsrl', action='store_true',
+                    help='NSRL Lookup for SHA-1 and MD5 hashes ONLY!')
 parser.add_argument('-o',
-    '--otx', action='store_true',
-    help='OTX by AlienVault Lookup.')
+                    '--otx', action='store_true',
+                    help='OTX by AlienVault Lookup.')
 parser.add_argument('-t',
-    '--threatcrowd', action='store_true',
-    help='ThreatCrowd Lookup for SHA-1 and MD5 hashes ONLY!')
+                    '--threatcrowd', action='store_true',
+                    help='ThreatCrowd Lookup for SHA-1 and MD5 hashes ONLY!')
 parser.add_argument('-r',
-    '--carriagereturn', action='store_true',
-    help='Use carriage returns with new lines on csv.')
+                    '--carriagereturn', action='store_true',
+                    help='Use carriage returns with new lines on csv.')
 
 #
 # MAIN PROGRAM
@@ -186,7 +186,7 @@ for filehash in filehashes:
     except:
         # There was an error...
         sys.stderr.write('ERROR:  An exception was raised!  ' +
-            'Raising original exception for debugging.\n')
+                         'Raising original exception for debugging.\n')
         raise
 
 # Exit without error
