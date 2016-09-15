@@ -30,16 +30,29 @@ import libs.otx
 
 # Setup command line argument parsing.
 parser = argparse.ArgumentParser(
-    description='Modular application to look up file intelligence information. Outputs CSV to STDOUT.')
+    description='Modular application to look up file intelligence information. \
+    Outputs CSV to STDOUT.')
 parser.add_argument('ConfigurationFile', help='Configuration file')
 parser.add_argument('InputFile',
                     help='Input file, one hash per line (MD5, SHA1, SHA256)')
-parser.add_argument('-a','--all', action='store_true', help='Perform All Lookups.')
-parser.add_argument('-v','--virustotal', action='store_true', help='VirusTotal Lookup.')
-parser.add_argument('-n','--nsrl', action='store_true', help='NSRL Lookup for SHA-1 and MD5 hashes ONLY!')
-parser.add_argument('-o','--otx', action='store_true', help='OTX by AlienVault Lookup.')
-parser.add_argument('-t','--threatcrowd', action='store_true', help='ThreatCrowd Lookup for SHA-1 and MD5 hashes ONLY!')
-parser.add_argument('-r','--carriagereturn', action='store_true', help='Use carriage returns with new lines on csv.')
+parser.add_argument('-a',
+    '--all', action='store_true',
+    help='Perform All Lookups.')
+parser.add_argument('-v',
+    '--virustotal', action='store_true',
+    help='VirusTotal Lookup.')
+parser.add_argument('-n',
+    '--nsrl', action='store_true',
+    help='NSRL Lookup for SHA-1 and MD5 hashes ONLY!')
+parser.add_argument('-o',
+    '--otx', action='store_true',
+    help='OTX by AlienVault Lookup.')
+parser.add_argument('-t',
+    '--threatcrowd', action='store_true',
+    help='ThreatCrowd Lookup for SHA-1 and MD5 hashes ONLY!')
+parser.add_argument('-r',
+    '--carriagereturn', action='store_true',
+    help='Use carriage returns with new lines on csv.')
 
 #
 # MAIN PROGRAM
@@ -61,13 +74,13 @@ Data = []
 # MODULES:  Setup additional intelligence source modules here
 
 # Pull the VirusTotal config
-vtpublicapi = ConfigFile.get('VirusTotal','PublicAPI')
+vtpublicapi = ConfigFile.get('VirusTotal', 'PublicAPI')
 
 # Pull the NSRL config
-nsrlpath = ConfigFile.get('NSRL','Path')
+nsrlpath = ConfigFile.get('NSRL', 'Path')
 
 # Pull the OTX config
-otxpublicapi = ConfigFile.get('OTX','PublicAPI')
+otxpublicapi = ConfigFile.get('OTX', 'PublicAPI')
 
 # Open file and read into list named hosts
 try:
@@ -76,7 +89,7 @@ try:
 except:
     sys.stderr.write("ERROR:  Cannot open InputFile!\n")
     exit(1)
-    
+
 # Setup CSV to STDOUT
 if args.carriagereturn:
     output = csv.writer(sys.stdout, lineterminator='\r\n')
@@ -130,29 +143,31 @@ for filehash in filehashes:
             VT = libs.vt.VT(vtpublicapi)
             if PrintHeaders:
                 VT.add_headers(Headers)
-            VT.add_row(filehash,row)
+            VT.add_row(filehash, row)
 
         # Lookup ThreatCrowd
         if args.threatcrowd or args.all:
             TC = libs.threatcrowdinfo.ThreatCrowd()
             if PrintHeaders:
                 TC.add_headers(Headers)
-            TC.add_row(filehash,row)
+            TC.add_row(filehash, row)
 
         # Lookup OTX
         if args.otx or args.all:
             OTX = libs.otx.OTX(otxpublicapi)
             if PrintHeaders:
                 OTX.add_headers(Headers)
-            OTX.add_row(filehash,row)
-            
-        # Lookup NSRL - This is slightly different than most modules because of required pre processing
-        # No need to use this as an example unless you preprocess other data
+            OTX.add_row(filehash, row)
+
+        # Lookup NSRL - This is slightly different than most
+        # modules because of required pre processing
+        # No need to use this as an example unless you
+        # preprocess other data
         if args.nsrl or args.all:
             NSRL = libs.nsrl.NSRL(nsrlpath)
             if PrintHeaders:
                 NSRL.add_headers(Headers)
-            NSRL.add_row(NSRLHashes,filehash,row)
+            NSRL.add_row(NSRLHashes, filehash, row)
 
         # MODULES:  Add additional intelligence source modules here
 
@@ -165,13 +180,14 @@ for filehash in filehashes:
 
         # Print out the data
         output.writerow([unicode(field).encode('utf-8') for field in row])
-        
+
         # This turns off headers for remaining rows
         PrintHeaders = False
     except:
         # There was an error...
-        sys.stderr.write('ERROR:  An exception was raised!  Raising original exception for debugging.\n')
+        sys.stderr.write('ERROR:  An exception was raised!  ' +
+            'Raising original exception for debugging.\n')
         raise
-        
+
 # Exit without error
 exit(0)
