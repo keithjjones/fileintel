@@ -12,6 +12,8 @@ import ConfigParser
 import csv
 # Required for STDOUT
 import sys
+# Required for paths
+import os
 
 # MODULES:  Add additional intelligence source modules here
 
@@ -82,6 +84,23 @@ nsrlpath = ConfigFile.get('NSRL', 'Path')
 # Pull the OTX config
 otxpublicapi = ConfigFile.get('OTX', 'PublicAPI')
 
+# Pull the 7Zip executable name
+try:
+    SevenZipPath = ConfigFile.get('7Zip', 'Path')
+    if os.path.exists(SevenZipPath):
+        sys.stderr.write("DEBUG:  Using 7Zip from: " +
+                         SevenZipPath + "\n")
+    else:
+        sys.stderr.write("DEBUG:  7Zip not configured correctly, " +
+                         "defaulting to much slower " +
+                         "internal Zip library!\n")
+        SevenZipPath = None
+except:
+    sys.stderr.write("DEBUG:  7Zip not configured correctly, " +
+                     "defaulting to much slower " +
+                     "internal Zip library!\n")
+    SevenZipPath = None
+
 # Open file and read into list named hosts
 try:
     with open(args.InputFile) as infile:
@@ -110,7 +129,7 @@ NSRLHashes = []
 if args.nsrl or args.all:
     sys.stderr.write('Preprocessing NSRL database.... please hold...\n')
     NSRL = libs.nsrl.NSRL(nsrlpath)
-    NSRLHashes = NSRL.lookup(filehashes)
+    NSRLHashes = NSRL.lookup(filehashes, SevenZipPath)
 
 # Abort Flag
 Aborted = False
@@ -125,7 +144,7 @@ for filehash in filehashes:
         row = []
 
         # Add the host to the output
-        row.append(filehash)
+        row.append(filehash.upper())
 
         if len(filehash) == 32:
             row.append('MD5')
