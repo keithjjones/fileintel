@@ -159,17 +159,17 @@ Preprocessing NSRL database.... please hold...
 
 # Resources:
 
-   - The VirusTotal Python library
-     - https://github.com/blacktop/virustotal-api
-   - The NSRL database
-     - http://www.nsrl.nist.gov/Downloads.htm
-     - https://blog.didierstevens.com/2015/09/01/nsrl-py-using-the-reference-data-set-of-the-national-software-reference-library/
-   - The ThreatCrowd Python library
-     - https://github.com/threatcrowd/ApiV2
-     - https://github.com/jheise/threatcrowd_api
-   - The OTX Python Library
-     - https://github.com/AlienVault-Labs/OTX-Python-SDK
-     - https://otx.alienvault.com/api/
+  - The VirusTotal Python library
+    - https://github.com/blacktop/virustotal-api
+  - The NSRL database
+    - http://www.nsrl.nist.gov/Downloads.htm
+    - https://blog.didierstevens.com/2015/09/01/nsrl-py-using-the-reference-data-set-of-the-national-software-reference-library/
+  - The ThreatCrowd Python library
+    - https://github.com/threatcrowd/ApiV2
+    - https://github.com/jheise/threatcrowd_api
+  - The OTX Python Library
+    - https://github.com/AlienVault-Labs/OTX-Python-SDK
+    - https://otx.alienvault.com/api/
 
 # License:
 
@@ -189,7 +189,5 @@ Read [Contributing.md](Contributing.md)
 
 # To Do:
 
-- Add Cymru
-- Add Malwr
 - Add ThreatExpert
 - Try to incorporate threat feeds from http://www.secrepo.com
