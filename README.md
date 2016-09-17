@@ -1,14 +1,18 @@
 # fileintel
 
-This is a tool used to collect various intelligence sources for a given file.  Fileintel is
-written in a modular fashion so new intelligence sources can be easily added.
+This is a tool used to collect various intelligence sources for a given file.
+Fileintel is written in a modular fashion so new intelligence sources can be
+easily added.
 
-Files are identified by file hash (MD5, SHA1, SHA256).  The output is in CSV format and
-sent to STDOUT so the data can be saved or piped into another program.  Since the output is in CSV
-format, spreadsheets such as Excel or database systems will easily be able to import the data.
+Files are identified by file hash (MD5, SHA1, SHA256).  The output is in CSV
+format and sent to STDOUT so the data can be saved or piped into another
+program.  Since the output is in CSV format, spreadsheets such as Excel or
+database systems will easily be able to import the data.
 
-This works with Python v2, but it should also work with Python v3.  If you find it does not work
-with Python v3 please post an issue.
+This works with Python v2, but it should also work with Python v3.  If you
+find it does not work with Python v3 please post an issue.
+
+This code has been tested on Windows 7 and Mac OSX El Capitan.
 
 ## Help Screen:
 
@@ -59,12 +63,26 @@ with the following command:
 $ pip install requests[security]
 ```
 
-If you are using the NSRL database lookups, download the NSRL "Minimal" data set as a zip file.  Put it
-in a directory you can access and point your configuration file to that zip file.  There is no need
-to unzip the NSRL data.
+## NSRL
 
-Lastly, I am a fan of virtualenv for Python.  To make a customized local installation of
-Python to run this tool, I recommend you read:  http://docs.python-guide.org/en/latest/dev/virtualenvs/
+If you are using the NSRL database lookups, download the NSRL "Minimal" data
+set as a zip file.  Put it in a directory you can access and point your
+configuration file to that zip file.  There is no need to unzip the NSRL data.
+
+## 7Zip
+
+If you want to use 7Zip (fast) rather than the internal Python zip library
+(slow) to read the large NSRL zipe file, you will need to install 7Zip.
+Windows installation of 7Zip is quite simple, but Mac OX X or Linux will need
+to install p7zip, the command line tool.  For Mac OS X, you can install this
+tool with Brew.  Once in install 7Zip you will need to point your
+configuration file appropriate to whereever the 7z executable lies.
+
+## Virtualenv
+
+Lastly, I am a fan of virtualenv for Python.  To make a customized local
+installation of Python to run this tool, I recommend you read:  
+http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
 # Running:
 
@@ -167,7 +185,7 @@ This product includes GeoLite2 data created by MaxMind, available from
 
 # Contributing:
 
-Read [Contributing.md] (Contributing.md)
+Read [Contributing.md](Contributing.md)
 
 # To Do:
 

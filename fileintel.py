@@ -32,8 +32,9 @@ import libs.otx
 
 # Setup command line argument parsing.
 parser = argparse.ArgumentParser(
-    description='Modular application to look up file intelligence information. \
-    Outputs CSV to STDOUT.')
+    description='Modular application to look up '
+                'file intelligence information.  '
+                'Outputs CSV to STDOUT.')
 parser.add_argument('ConfigurationFile', help='Configuration file')
 parser.add_argument('InputFile',
                     help='Input file, one hash per line (MD5, SHA1, SHA256)')
@@ -88,15 +89,15 @@ otxpublicapi = ConfigFile.get('OTX', 'PublicAPI')
 try:
     SevenZipPath = ConfigFile.get('7Zip', 'Path')
     if os.path.exists(SevenZipPath):
-        sys.stderr.write("DEBUG:  Using 7Zip from: " +
+        sys.stderr.write("INFO:  Using 7Zip from: " +
                          SevenZipPath + "\n")
     else:
-        sys.stderr.write("DEBUG:  7Zip not configured correctly, " +
+        sys.stderr.write("INFO:  7Zip not configured correctly, " +
                          "defaulting to much slower " +
                          "internal Zip library!\n")
         SevenZipPath = None
 except:
-    sys.stderr.write("DEBUG:  7Zip not configured correctly, " +
+    sys.stderr.write("INFO:  7Zip not configured correctly, " +
                      "defaulting to much slower " +
                      "internal Zip library!\n")
     SevenZipPath = None

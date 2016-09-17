@@ -11,6 +11,7 @@ import time
 # CLASSES
 #
 
+
 class VT(object):
     """
     Class to hold VirusTotal items.
@@ -26,10 +27,10 @@ class VT(object):
         self.vtpublicapi = vtpublicapi
         self.vt = VirusTotalPublicApi(self.vtpublicapi)
 
-    """
-    Adds appropriate headers to input list.
-    """
-    def add_headers(self,inputheaders):
+    def add_headers(self, inputheaders):
+        """
+        Adds appropriate headers to input list.
+        """
         inputheaders.append('VirusTotal Link')
         inputheaders.append('VirusTotal Scan Date')
         inputheaders.append('VirusTotal SHA256')
@@ -41,38 +42,47 @@ class VT(object):
         inputheaders.append('VirusTotal Conviction Percentage')
         inputheaders.append('VirusTotal Scan Results')
 
-    """
-    Adds the pulled data to the input row.
-    """
-    def add_row(self,filehash,inputrow):
+    def add_row(self, filehash, inputrow):
+        """
+        Adds the pulled data to the input row.
+        """
         vtresponse = self.vt.get_file_report(filehash)
 
-        while vtresponse["response_code"] != 200 and vtresponse["response_code"] != 403:
+        while "response_code" not in vtresponse or \
+                (vtresponse["response_code"] != 200 and
+                    vtresponse["response_code"] != 403):
             time.sleep(60)  # Sleep for the API throttling
             vtresponse = self.vt.get_file_report(filehash)
 
-        if not vtresponse.has_key("results"):
+        if "results" not in vtresponse:
             vturl = 'INVALID API KEY'
 
-        vtresults = vtresponse.get('results',{})
+        vtresults = vtresponse.get('results', {})
 
-        vtsha1 = vtresults.get('sha1','')
-        vtscandate = vtresults.get('scan_date','')
-        vturl = vtresults.get('permalink','')
-        vtmsg = vtresults.get('verbose_msg','')
-        vtsha256 = vtresults.get('sha256','')
-        vtpositives = str(vtresults.get('positives',0))
-        vttotal = str(vtresults.get('total',0))
-        vtmd5 = vtresults.get('md5','')
+        vtsha1 = vtresults.get('sha1', '')
+        vtscandate = vtresults.get('scan_date', '')
+        vturl = vtresults.get('permalink', '')
+        vtmsg = vtresults.get('verbose_msg', '')
+        vtsha256 = vtresults.get('sha256', '')
+        vtpositives = str(vtresults.get('positives', 0))
+        vttotal = str(vtresults.get('total', 0))
+        vtmd5 = vtresults.get('md5', '')
 
-        vtscansdict = vtresults.get('scans',{})
-        vtscans = '\n'.join(["{} Detected: {} Result: {} Version: {} Update: {}".format(s,vtscansdict[s].get('detected',''),vtscansdict[s].get('result',''),vtscansdict[s].get('Version',''),vtscansdict[s].get('update','')) for s in vtscansdict])
+        vtscansdict = vtresults.get('scans', {})
+        vtscans = '\n'.join(["{} Detected: {} Result: "
+                             "{} Version: {} Update: {}"
+                            .format(s, vtscansdict[s].get('detected', ''),
+                                    vtscansdict[s].get('result', ''),
+                                    vtscansdict[s].get('Version', ''),
+                                    vtscansdict[s].get('update', ''))
+                            for s in vtscansdict])
 
         if (float(vttotal) > 0):
-            vtconvictionpercentage = str(float(vtpositives)/float(vttotal) * 100)
+            vtconvictionpercentage = str(float(vtpositives)/float(vttotal) *
+                                         100)
         else:
             vtconvictionpercentage = 'NaN'
-                    
+
         inputrow.append(vturl)
         inputrow.append(vtscandate)
         inputrow.append(vtsha256)
