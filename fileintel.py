@@ -26,6 +26,29 @@ import libs.threatcrowdinfo
 # Local OTX functions
 import libs.otx
 
+
+#
+# Detect type of hash
+#
+def typeofhash(filehhash):
+    """
+    Determines the type of the hash by the length.
+
+    :param filehash: The hash as a string
+    :results: The hash type as either MD5, SHA-1, SHA-256,
+    SHA-512 or Uknown
+    """
+    if len(filehash) == 32:
+        return('MD5')
+    elif len(filehash) == 40:
+        return('SHA-1')
+    elif len(filehash) == 64:
+        return('SHA-256')
+    elif len(filehash) == 128:
+        return('SHA-512')
+    else:
+        return('Unknown')
+
 #
 # COMMAND LINE ARGS
 #
@@ -53,6 +76,9 @@ parser.add_argument('-o',
 parser.add_argument('-t',
                     '--threatcrowd', action='store_true',
                     help='ThreatCrowd Lookup for SHA-1 and MD5 hashes ONLY!')
+parser.add_argument('-e',
+                    '--threatexpert', action='store_true',
+                    help='ThreatExpert Lookup for MD5 hashes ONLY!')
 parser.add_argument('-r',
                     '--carriagereturn', action='store_true',
                     help='Use carriage returns with new lines on csv.')
@@ -147,16 +173,8 @@ for filehash in filehashes:
         # Add the host to the output
         row.append(filehash.upper())
 
-        if len(filehash) == 32:
-            row.append('MD5')
-        elif len(filehash) == 40:
-            row.append('SHA-1')
-        elif len(filehash) == 64:
-            row.append('SHA-256')
-        elif len(filehash) == 128:
-            row.append('SHA-512')
-        else:
-            row.append('Unknown')
+        # Detect the type of hash and add it
+        row.append(typeofhash(filehash))
 
         # Lookup VirusTotal
         if args.virustotal or args.all:
