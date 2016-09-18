@@ -73,11 +73,11 @@ configuration file to that zip file.  There is no need to unzip the NSRL data.
 ## 7Zip
 
 If you want to use 7Zip (fast) rather than the internal Python zip library
-(slow) to read the large NSRL zipe file, you will need to install 7Zip.
+(slow) to read the large NSRL zip file, you will need to install 7Zip.
 Windows installation of 7Zip is quite simple, but Mac OX X or Linux will need
 to install p7zip, the command line tool.  For Mac OS X, you can install this
 tool with Brew.  Once in install 7Zip you will need to point your
-configuration file appropriate to whereever the 7z executable lies.
+configuration file appropriate to wherever the 7z executable lies.
 
 ## Virtualenv
 
