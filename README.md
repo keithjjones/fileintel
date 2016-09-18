@@ -12,7 +12,8 @@ database systems will easily be able to import the data.
 This works with Python v2, but it should also work with Python v3.  If you
 find it does not work with Python v3 please post an issue.
 
-This code has been tested on Windows 7 and Mac OSX El Capitan.
+This code has been tested on Windows 7 and Mac OSX El Capitan.  If you try this 
+on any other type of machine please let me know!
 
 ## Help Screen:
 
@@ -107,9 +108,13 @@ works in the following way:
 
 ```
 $ python fileintel.py local/config.conf sampledata/smallerlist.txt -a > sampledata/smallerlist.csv
+INFO:  Using 7Zip from: /usr/local/bin/7z
 Preprocessing NSRL database.... please hold...
 *** Processing 275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f ***
 *** Processing 001025c6d4974fb2ccbea56f710282aca6c1353cc7120d5d4a7853688084953a ***
+*** Processing 001025c6d4974fb2ccbea56f710282aca6c1353cc7120d5d4a7853688084953b ***
+*** Processing 92945627f32dfde376ffb7091b5faad2 ***
+*** Processing 92945627f32dfde376ffb7091b5faad1 ***
 *** Processing CEEF161D68AE2B690FA9616361271578 ***
 *** Processing D41D8CD98F00B204E9800998ECF8427E ***
 *** Processing B284A42B124849E71DBEF653D30229F1 ***
@@ -117,12 +122,14 @@ Preprocessing NSRL database.... please hold...
 *** Processing E02CE6D73156A11BA84A798B26DE1D12 ***
 *** Processing B4ED7AEDACD28CBBDE6978FB09C22C75 ***
 *** Processing C6336EA255EFA7371337C0882D175BEE44CBBD49 ***
+
 ```
 
 ### Larger List:
 
 ```
 $ python fileintel.py local/config.conf sampledata/largerlist.txt -a > sampledata/largerlist.csv
+INFO:  Using 7Zip from: /usr/local/bin/7z
 Preprocessing NSRL database.... please hold...
 *** Processing 275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f ***
 *** Processing 001025c6d4974fb2ccbea56f710282aca6c1353cc7120d5d4a7853688084953a ***
@@ -156,6 +163,8 @@ Preprocessing NSRL database.... please hold...
     - http://www.threatcrowd.org
   - OTX by AlienVault (API key and network I/O required)
     - https://otx.alienvault.com
+  - ThreatExpert (Network I/O required)
+    - http://www.threatexpert.com/
 
 # Resources:
 
@@ -170,6 +179,12 @@ Preprocessing NSRL database.... please hold...
   - The OTX Python Library
     - https://github.com/AlienVault-Labs/OTX-Python-SDK
     - https://otx.alienvault.com/api/
+  - ThreatExpert
+    - Scrapes using BeautifulSoup 
+      - https://www.crummy.com/software/BeautifulSoup/bs4/doc
+    - Web requests using requests library
+      - http://docs.python-requests.org/en/master/
+    - http://www.threatexpert.com/
 
 # License:
 
@@ -178,16 +193,13 @@ This application is covered by the Creative Commons BY-SA license.
 - https://creativecommons.org/licenses/by-sa/4.0/
 - https://creativecommons.org/licenses/by-sa/4.0/legalcode
 
-```
-This product includes GeoLite2 data created by MaxMind, available from
-<a href="http://www.maxmind.com">http://www.maxmind.com</a>.
-```
-
 # Contributing:
 
 Read [Contributing.md](Contributing.md)
 
 # To Do:
 
-- Add ThreatExpert
 - Try to incorporate threat feeds from http://www.secrepo.com
+- Add malware sandbox intelligence
+- Add smart lookup based upon hash type
+- Better hash detection (for example, 0-9, A-F characters only)

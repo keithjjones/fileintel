@@ -25,6 +25,8 @@ import libs.nsrl
 import libs.threatcrowdinfo
 # Local OTX functions
 import libs.otx
+# Local ThreatExpert functions
+import libs.threatexpert
 
 
 #
@@ -176,6 +178,16 @@ for filehash in filehashes:
         # Detect the type of hash and add it
         row.append(typeofhash(filehash))
 
+        # Lookup NSRL - This is slightly different than most
+        # modules because of required pre processing.
+        # No need to use this as an example unless you
+        # preprocess other data.
+        if args.nsrl or args.all:
+            NSRL = libs.nsrl.NSRL(nsrlpath)
+            if PrintHeaders:
+                NSRL.add_headers(Headers)
+            NSRL.add_row(NSRLHashes, filehash, row)
+
         # Lookup VirusTotal
         if args.virustotal or args.all:
             VT = libs.vt.VT(vtpublicapi)
@@ -197,15 +209,12 @@ for filehash in filehashes:
                 OTX.add_headers(Headers)
             OTX.add_row(filehash, row)
 
-        # Lookup NSRL - This is slightly different than most
-        # modules because of required pre processing
-        # No need to use this as an example unless you
-        # preprocess other data
-        if args.nsrl or args.all:
-            NSRL = libs.nsrl.NSRL(nsrlpath)
+        # Lookup ThreatExpert
+        if args.threatexpert or args.all:
+            ThreatExert = libs.threatexpert.ThreatExpert()
             if PrintHeaders:
-                NSRL.add_headers(Headers)
-            NSRL.add_row(NSRLHashes, filehash, row)
+                ThreatExert.add_headers(Headers)
+            ThreatExert.add_row(filehash, row)
 
         # MODULES:  Add additional intelligence source modules here
 
