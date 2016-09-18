@@ -39,10 +39,6 @@ class NSRL(object):
 
         inputrow.append(NSRLMatch)
 
-    #
-    #  Inspired by: https://blog.didierstevens.com/2015/09/01/nsrl-py-using-the
-    #               -reference-data-set-of-the-national-software-reference-library/
-    #
     def lookup(self, filehashes, SevenZipPath=None):
         """
         Lookup the list of file hashes and returns a list of the
