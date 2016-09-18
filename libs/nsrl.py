@@ -23,16 +23,16 @@ class NSRL(object):
     def __init__(self, NSRLPath):
         self.NSRLPath = NSRLPath
 
-    """
-    Adds appropriate headers to input list.
-    """
     def add_headers(self, inputheaders):
+        """
+        Adds appropriate headers to input list.
+        """
         inputheaders.append('NSRL SHA-1 or MD5 Match')
 
-    """
-    Adds the pulled data to the input row.
-    """
     def add_row(self, NSRLHashes, filehash, inputrow):
+        """
+        Adds the pulled data to the input row.
+        """
         NSRLMatch = False
         if filehash.upper() in [n.upper() for n in NSRLHashes]:
             NSRLMatch = True
@@ -47,6 +47,11 @@ class NSRL(object):
         """
         Lookup the list of file hashes and returns a list of the
         hashes that exist in the NSRL.
+
+        Inspired by: https://blog.didierstevens.com/2015/09/01/nsrl-py-using-
+                      the-reference-data-set-of-the-national-software-
+                      reference-library/
+
         """
         upperhashes = [f.upper() for f in filehashes]
         outputhashes = []
