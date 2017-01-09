@@ -207,3 +207,4 @@ Read [Contributing.md](Contributing.md)
 - Add malware sandbox intelligence
 - Add smart lookup based upon hash type
 - Better hash detection (for example, 0-9, A-F characters only)
+- Look at https://github.com/Yelp/threat_intel
