@@ -37,7 +37,7 @@ class VT(object):
         inputheaders.append('VirusTotal SHA1')
         inputheaders.append('VirusTotal MD5')
         inputheaders.append('VirusTotal Verbose Msg')
-        inputheaders.append('VirusTotal Positivie Scans')
+        inputheaders.append('VirusTotal Positive Scans')
         inputheaders.append('VirusTotal Total Scans')
         inputheaders.append('VirusTotal Conviction Percentage')
         inputheaders.append('VirusTotal Scan Results')
