@@ -176,6 +176,7 @@ Preprocessing NSRL database.... please hold...
     - https://github.com/blacktop/virustotal-api
   - The NSRL database
     - https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl/nsrl-download
+    - https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl/nsrl-download/current-rds
     - https://blog.didierstevens.com/2015/09/01/nsrl-py-using-the-reference-data-set-of-the-national-software-reference-library/
   - The ThreatCrowd Python library
     - https://github.com/threatcrowd/ApiV2
